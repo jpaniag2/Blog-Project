@@ -19,6 +19,7 @@ feature"Blogger adds an article" do
         expect(page).to have_content("New Capybara Article")
         expect(page).to have_content("This is a new Capybara article")
 
-    end
+    
+end
     
 end
