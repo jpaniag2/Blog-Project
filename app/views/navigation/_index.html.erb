@@ -44,8 +44,12 @@ li:last-child {
 <li style="float:right" >
     
     <ul style="float:right">
-    <% if current_user %>
-    Logged in as <%= current_user.name %>.
+      <li>
+         <% if current_user %>
+        Hello, <%= current_user.name%>
+        <br>
+      </li>
+   
     
     <li>
       <%= link_to 'Log Out', logout_path %>

@@ -3,7 +3,6 @@ img{
   width:900px;
   height:400px;
   object-fit:cover; 
-}
   
 </style>
 
@@ -27,12 +26,17 @@ img{
   <%= @article.text %>
 </p>
 
-<h2>Comments</h2>
 
-<%= render @article.comments %>
- 
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+<div class = "articleSections">
+  <div>
+    <%= render @article.comments %>
+  </div>
+  <div>
+    <%= render 'comments/form' %>
+  </div>
 
-<%= link_to 'Article List', articles_path %>
+</div>
+
+
+

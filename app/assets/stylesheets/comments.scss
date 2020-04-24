@@ -1,3 +1,24 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.deleteCommentFormat{
+    font-size: 12px;
+    text-align: right;
+}
+
+.commentsFormat{
+    background: #F8F8F8;
+    text-align: left;
+}
+
+.articleSections{
+    padding: 100px;
+    padding-left: 300px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2em;
+}
+
+.commentBody{
+    font-size: 14px;
+}

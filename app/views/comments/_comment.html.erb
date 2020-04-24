@@ -1,13 +1,23 @@
-<p style= "border:1px; border-style:solid;">
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-    <br>
-    <strong>Comment:</strong>
-    <%= comment.body %>
+
+
+<p>
+    <div class= "commentsFormat">
+        <u>Name:</u>
+        <%= comment.commenter %>
+        <br>
+        <br>
+        <div class = "commentBody">
+            <%= comment.body %>
+        </div>
+        
+        <br>
+    </div>
+    
 </p>
 
-<p style= "text-align:right; font-size:14px;">
-    <%= link_to 'Destroy Comment', [comment.article, comment],
+<div class = "deleteCommentFormat">
+    <%= link_to 'Delete Comment', [comment.article, comment],
                 method: :delete, 
                 data: { confirm: 'Are you sure?'} %>
-</p>
+</div>
+
