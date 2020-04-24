@@ -1,5 +1,20 @@
+<style>
+img{
+  width:900px;
+  height:400px;
+  object-fit:cover; 
+}
+  
+</style>
 
-  <%= image_tag(@article.image, style:'width:100%') %>
+
+<div>
+    <%= render 'navigation/index' %>
+</div>
+
+<div class"img">
+  <%= image_tag(@article.image) %>
+</div>
 
 
 <p>

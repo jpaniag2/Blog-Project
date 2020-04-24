@@ -1,0 +1,68 @@
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+  
+}
+
+li a{
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+</style>
+
+<ul>
+    
+<li><%= link_to 'Home', controller: 'welcome' %></li>
+
+<li> <%= link_to 'My Blog', controller: 'articles' %> </li>
+
+<li style="float:right" >
+    
+    <ul style="float:right">
+    <% if current_user %>
+    Logged in as <%= current_user.name %>.
+    
+    <li>
+      <%= link_to 'Log Out', logout_path %>
+    <% else %>
+    </li>  
+    
+    <li>
+      <%= link_to 'Sign Up', signup_path %>
+    </li>
+    
+    <li>
+    <%= link_to 'Log In', login_path %>
+    <% end %>
+    </li>
+    
+    </ul>
+    
+</li> 
+
+</ul>
