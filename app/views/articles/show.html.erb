@@ -3,6 +3,8 @@ img{
   width:900px;
   height:400px;
   object-fit:cover; 
+}
+
   
 </style>
 
@@ -11,20 +13,34 @@ img{
     <%= render 'navigation/index' %>
 </div>
 
+
 <div class"img">
-  <%= image_tag(@article.image) %>
+      <%= image_tag(@article.image) %>
+</div>
+ 
+<div class = "articleBody">
+
+  <div></div>
+  
+  <div> 
+  
+      <div>
+        <br>
+        <strong><%= @article.title %> </strong>
+        <br>
+        <br>
+      </div>
+      
+  
+      <div <div class = "articleText">
+        <%= @article.text %>
+      </div>
+    
+  </div>
+  <div></div>
+
 </div>
 
-
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
 
 
 
