@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   
   resources :articles do
     resources :comments
+    resources :reviews
   end
   
   root 'welcome#index'

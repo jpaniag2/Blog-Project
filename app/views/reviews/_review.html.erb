@@ -1,0 +1,30 @@
+
+
+<p>
+    <div class= "reviewsFormat">
+        <u>Name:</u>
+        <%= review.commenter %>
+        <br>
+        <br>
+        <div class = "reviewBody">
+            <%= review.body %>
+        </div>
+                <br>
+        <br>
+        <div class = "reviewBody">
+            <%= review.rating %>
+        </div>
+        
+        
+        <br>
+    </div>
+    
+</p>
+
+<div class = "deleteReviewFormat">
+    <%= link_to 'Delete Review', [review.article, review],
+                method: :delete, 
+                data: { confirm: 'Are you sure?'} %>
+</div>
+
+
