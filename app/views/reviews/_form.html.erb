@@ -1,16 +1,18 @@
 <%= simple_form_for([@article, @article.reviews.build]) do |f| %>
   <p>
     <%= f.label :name %><br>
-    <%= f.input_field :commenter %>
+    <%= f.input_field :commenter, required: true %>
   </p>
   <p>
     <%= f.label :comment %><br>
-    <%= f.input_field :body %>
+    <%= f.input_field :body, required: true %>
   </p>
   <p>
-      <%= f.input :rating, as: :radio_buttons, collection: 1..5 %>
+      <%= f.label :rating %><br>
+      <%= f.input_field :rating, as: :radio_buttons, collection: 1..5, required: true %>
   </p>
   <p>
     <%= f.button :submit %>
   </p>
 <% end %>
+
